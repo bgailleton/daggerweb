@@ -27,14 +27,14 @@ ts.set_variable_precipitations(prec)
 
 print("begin")
 
-for i in range(1000):
+for i in range(20):
 	ts.standalone_implicit_SPL()
 	ts.block_uplift(Urate,dt)
 	print(i)
 print("end")
 
-# fig,ax = plt.subplots()
+fig,ax = plt.subplots()
 
-# ax.imshow(ts.get_topo().reshape(rshp), cmap = "gist_earth")
+ax.imshow(ts.get_topo().reshape(rshp), cmap = "gist_earth")
 
-# plt.show()
+plt.show()
